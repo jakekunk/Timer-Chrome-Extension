@@ -112,7 +112,9 @@ function checkSite(url) {
 
   //check if we're on a prohibited/time-limited site url
   //console.log(url);
-  if (url === ("https://www.youtube.com/" || "youtube.com")) {
+
+  //could also do a check for more sites by checking
+  if (url.includes("youtube.com")) {
     //url is https --> consider parsing string or using a fuzzier match for better results
     return startTimer();
   } else {
